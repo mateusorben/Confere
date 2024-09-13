@@ -15,11 +15,17 @@ function adicionarItem() {
 
     divConfirmadosItens.innerHTML += `
             <div class="item" id="item-${idCounter}">
-                <p>${descricaoItemModal}</p>
-                <div class="btns-item">
+                <div class="check-text-item">
                     <input type="checkbox">
-                    <button type="button" onclick="apagarItem(${idCounter})">x</button>
-                    <button type="button" onclick="editarItem(${idCounter})">o</button>
+                    <p>${descricaoItemModal}</p>
+                </div>
+                <div class="btns-item">
+                    <button type="button" onclick="apagarItem(${idCounter})">
+                        <img src="imagens/botao-excluir.png" alt="botao-editar" id="btn-excluir">
+                    </button>
+                    <button type="button" onclick="editarItem(${idCounter})">
+                            <img src="imagens/botao-editar.png" alt="botao-editar" id="btn-editar">
+                    </button>
                 </div>
             </div>
     `
