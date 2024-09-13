@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .confirmados {
     display: flex;
     flex-direction: column;
@@ -7,16 +11,18 @@
 .item {
     display: flex;
     margin: 5px;
-    height: 45px;
+    height: 55px;
     background-color: aliceblue;
     border-left: 4px solid blue;
     border-radius: 7px;
     box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.5);
     align-items: center;
+    justify-content: space-between;
 }
 
 .item p {
     margin-left: 5px;
+    font-size: 18px;
 }
 
 .btn-abrir-modal {
@@ -48,7 +54,7 @@
     z-index: 1;
 }
 
-.modal {
+.modal, .modal-editar {
     display: none;
     background-color: white;
     padding: 20px;
@@ -58,7 +64,9 @@
     position: relative;
 }
 
-.header-modal {
+.header-modal, .header-modal-editar {
     display: flex;
     justify-content: space-between;
 }
+
+/* Modal Editar */

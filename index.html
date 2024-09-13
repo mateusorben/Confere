@@ -20,21 +20,21 @@
                 <h2>Adicionar novo item</h2>
                 <button type="button" onclick="fecharModal()">X</button>
             </div>
-            <label for="item-descricao-modal">DescriÃ§Ã£o:</label>
+            <label for="item-descricao-modal">Descrição:</label>
             <input type="text" name="item-descricao-modal" id="item-descricao-modal">
     
             <button type="button" onclick="adicionarItem()">Confirmar</button>
         </div>
 
-        <div class="modal-editar">
-            <div class="header-modal">
+        <div class="modal-editar" data-id="">
+            <div class="header-modal-editar">
                 <h2>Editar item</h2>
                 <button type="button" onclick="fecharModal()">X</button>
             </div>
-            <label for="item-descricao-modal">Nova DescriÃ§Ã£o:</label>
-            <input type="text" name="item-descricao-modal" id="item-descricao-modal">
+            <label for="item-descricao-modal-editar">Nova Descrição:</label>
+            <input type="text" name="item-descricao-modal-editar" id="item-descricao-modal-editar">
     
-            <button type="button" onclick="adicionarItem()">Confirmar</button>
+            <button type="button" onclick="confirmarEdicaoItem()">Confirmar</button>
         </div>
     </div>
 </body>

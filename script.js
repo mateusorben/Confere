@@ -3,6 +3,8 @@ let idCounter = 0;
 const containerModal = document.querySelector('.container-modal');
 const modal = document.querySelector('.modal');
 
+const modalEditar = document.querySelector('.modal-editar');
+
 function adicionarItem() {
     const divConfirmadosItens = document.querySelector('.confirmados');
     const descricaoItemModal = document.querySelector('#item-descricao-modal').value;
@@ -14,9 +16,11 @@ function adicionarItem() {
     divConfirmadosItens.innerHTML += `
             <div class="item" id="item-${idCounter}">
                 <p>${descricaoItemModal}</p>
-                <input type="checkbox">
-                <button type="button" onclick="apagarItem(${idCounter})">x</button>
-                <button type="button" onclick="editarItem(${idCounter})">o</button>
+                <div class="btns-item">
+                    <input type="checkbox">
+                    <button type="button" onclick="apagarItem(${idCounter})">x</button>
+                    <button type="button" onclick="editarItem(${idCounter})">o</button>
+                </div>
             </div>
     `
     containerModal.style.display = "none";
@@ -31,6 +35,7 @@ function abrirModal() {
 function fecharModal() {
     containerModal.style.display = "none";
     modal.style.display = "none";
+    modalEditar.style.display = "none"
 }
 
 function apagarItem(id) {
@@ -44,5 +49,26 @@ function editarItem(id) {
     const item = document.querySelector(`#item-${id}`);
     if (item) {
         const descricao = item.querySelector('p').textContent;
+        const descricaoModal = document.querySelector('#item-descricao-modal-editar');
+
+        descricaoModal.value = descricao;
+        containerModal.style.display = "flex";
+        modalEditar.style.display = "block";
+        modalEditar.dataset.id = id;
     }
+}
+
+function confirmarEdicaoItem() {
+    const modalEditar = document.querySelector('.modal-editar');
+    const id = modalEditar.dataset.id;
+
+    const descricaoModal = document.querySelector('#item-descricao-modal-editar');
+    const item = document.querySelector(`#item-${id}`);
+
+    if (item) {
+        const descricaoP = item.querySelector('p');
+        descricaoP.textContent = descricaoModal.value;
+    }
+
+    fecharModal();
 }
