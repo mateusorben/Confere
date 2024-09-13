@@ -57,7 +57,7 @@ body {
 .modal, .modal-editar {
     display: none;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 7px;
     box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -67,6 +67,21 @@ body {
 .header-modal, .header-modal-editar {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* Modal Editar */
+.header-modal button, .header-modal-editar button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    height: 18px;
+    width: 18px;
+} 
+
+.header-modal button:hover, .header-modal-editar button:hover {
+    color: rgba(0, 0, 0, 0.5);
+} 
+
+.header-modal h2, .header-modal-editar h2 {
+    margin: 0px 0px 20px 0;
+}
