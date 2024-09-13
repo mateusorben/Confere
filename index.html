@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confere</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="confirmados">
+        </div>
+        <button type="button" onclick="abrirModal()" class="btn-abrir-modal">+</button>
+    </div>
+
+    <div class="container-modal">
+        <div class="modal">
+            <div class="header-modal">
+                <h2>Adicionar novo item</h2>
+                <button type="button" onclick="fecharModal()">X</button>
+            </div>
+            <label for="item-descricao-modal">Descrição:</label>
+            <input type="text" name="item-descricao-modal" id="item-descricao-modal">
+    
+            <button type="button" onclick="adicionarItem()">Confirmar</button>
+        </div>
+
+        <div class="modal-editar">
+            <div class="header-modal">
+                <h2>Editar item</h2>
+                <button type="button" onclick="fecharModal()">X</button>
+            </div>
+            <label for="item-descricao-modal">Nova Descrição:</label>
+            <input type="text" name="item-descricao-modal" id="item-descricao-modal">
+    
+            <button type="button" onclick="adicionarItem()">Confirmar</button>
+        </div>
+    </div>
+</body>
+</html>
