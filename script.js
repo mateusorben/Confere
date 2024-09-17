@@ -20,11 +20,11 @@ function adicionarItem() {
                     <p>${descricaoItemModal}</p>
                 </div>
                 <div class="btns-item">
+                    <button type="button" onclick="editarItem(${idCounter})">
+                        <img src="imagens/botao-editar.png" alt="botao-editar" id="btn-editar">
+                    </button>
                     <button type="button" onclick="apagarItem(${idCounter})">
                         <img src="imagens/botao-excluir.png" alt="botao-editar" id="btn-excluir">
-                    </button>
-                    <button type="button" onclick="editarItem(${idCounter})">
-                            <img src="imagens/botao-editar.png" alt="botao-editar" id="btn-editar">
                     </button>
                 </div>
             </div>
@@ -35,7 +35,7 @@ function adicionarItem() {
 
 function abrirModal() {
     containerModal.style.display = "flex";
-    modal.style.display = "block";
+    modal.style.display = "flex";
 } 
 
 function fecharModal() {
@@ -59,7 +59,7 @@ function editarItem(id) {
 
         descricaoModal.value = descricao;
         containerModal.style.display = "flex";
-        modalEditar.style.display = "block";
+        modalEditar.style.display = "flex";
         modalEditar.dataset.id = id;
     }
 }

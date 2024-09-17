@@ -1,5 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .confirmados {
@@ -18,6 +21,7 @@ body {
     box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: space-between;
+    width: 380px;
 }
 
 .item p {
@@ -60,7 +64,7 @@ body {
 }
 
 #btn-excluir, #btn-editar {
-    height: 20px;
+    height: 28px;
 }
 
 /* Modal */
@@ -86,6 +90,8 @@ body {
     box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     position: relative;
+    flex-direction: column;
+    width: 300px;
 }
 
 .header-modal, .header-modal-editar {
@@ -108,4 +114,9 @@ body {
 
 .header-modal h2, .header-modal-editar h2 {
     margin: 0px 0px 20px 0;
+}
+
+.btn-confirmar-modal {
+    margin: 15px auto 0px auto;
+    width: 80px;
 }

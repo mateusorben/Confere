@@ -8,6 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <h2>Deixa que eu lembro por vocÃª</h2>
     <div class="container">
         <div class="confirmados">
         </div>
@@ -20,10 +21,10 @@
                 <h2>Adicionar novo item</h2>
                 <button type="button" onclick="fecharModal()">X</button>
             </div>
-            <label for="item-descricao-modal">Descrição:</label>
+            <label for="item-descricao-modal">DescriÃ§Ã£o:</label>
             <input type="text" name="item-descricao-modal" id="item-descricao-modal">
     
-            <button type="button" onclick="adicionarItem()">Confirmar</button>
+            <button type="button" onclick="adicionarItem()" class="btn-confirmar-modal">Confirmar</button>
         </div>
 
         <div class="modal-editar" data-id="">
@@ -31,10 +32,10 @@
                 <h2>Editar item</h2>
                 <button type="button" onclick="fecharModal()">X</button>
             </div>
-            <label for="item-descricao-modal-editar">Nova Descrição:</label>
+            <label for="item-descricao-modal-editar">Nova DescriÃ§Ã£o:</label>
             <input type="text" name="item-descricao-modal-editar" id="item-descricao-modal-editar">
     
-            <button type="button" onclick="confirmarEdicaoItem()">Confirmar</button>
+            <button type="button" onclick="confirmarEdicaoItem()" class="btn-confirmar-modal">Confirmar</button>
         </div>
     </div>
 </body>
